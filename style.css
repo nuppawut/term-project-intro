@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 1. Header */
+.header-top {
+    background-color: #ff703b;
+    color: #fff;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    width: 65px;
+    height: 65px;
+}
+
+.header-title h1 {
+    font-size: 1.75rem;
+}
+
+.header-title p {
+    font-size: 0.95rem;
+}
+
+/* 2. Navbar (ชิดซ้าย ไม่เปลี่ยนสี) */
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-container {
+    display: flex;
+    list-style: none;
+    padding: 0 8%;
+}
+
+.nav-item {
+    border-right: 1px solid #e0e0e0;
+}
+
+.nav-item:first-child {
+    border-left: 1px solid #e0e0e0;
+}
+
+.nav-link {
+    display: block;
+    padding: 12px 24px;
+    color: #444;
+    text-decoration: none;
+}
+
+.nav-item.active .nav-link {
+    font-weight: bold;
+}
+
+/* Main Content Layout */
+.main-content {
+    flex: 1;
+    padding: 40px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 1.6rem;
+    color: #801200;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #FF4500;
+}
+
+/* Components */
+.poster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.poster-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+}
+
+.poster-img {
+    width: 100%;
+    height: auto;
+}
+
+.poster-body {
+    padding: 20px;
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.course-table th, 
+.course-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.course-table th {
+    background-color: #801200;
+    color: #fff;
+}
+
+.badge-open {
+    color: #137333;
+    font-weight: bold;
+}
+
+.badge-closed {
+    color: #c5221f;
+    font-weight: bold;
+}
+
+.form-card {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.btn-submit {
+    background-color: #FF4500;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 3. Footer */
+.footer {
+    background-color: #8b5019;
+    color: #fff;
+    padding: 40px 8%;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column a {
+    color: #ffaa80;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .header-top, 
+    .nav-container {
+        flex-direction: column;
+    }
+}
